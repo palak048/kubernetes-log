@@ -1,0 +1,11 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: palak-dummy-pod
+spec:
+  containers:
+    - name: palak-dummy-pod
+      image: ubuntu
+      command: ["/bin/bash", "-ec", "while :; do echo 'This is my Pod:palak-dummy-pod'; sleep 5 ; done"]
+  restartPolicy: Never
+  nodeName: master-node 
