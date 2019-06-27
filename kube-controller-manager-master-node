@@ -1,0 +1,201 @@
+{"log":"I0627 08:10:41.308563       1 serving.go:319] Generated self-signed cert in-memory\n","stream":"stderr","time":"2019-06-27T08:10:41.309450741Z"}
+{"log":"I0627 08:10:41.769938       1 controllermanager.go:164] Version: v1.15.0\n","stream":"stderr","time":"2019-06-27T08:10:41.770122654Z"}
+{"log":"I0627 08:10:41.770662       1 secure_serving.go:116] Serving securely on 127.0.0.1:10257\n","stream":"stderr","time":"2019-06-27T08:10:41.770756069Z"}
+{"log":"I0627 08:10:41.781169       1 deprecated_insecure_serving.go:53] Serving insecurely on [::]:10252\n","stream":"stderr","time":"2019-06-27T08:10:41.781333232Z"}
+{"log":"I0627 08:10:41.781531       1 leaderelection.go:235] attempting to acquire leader lease  kube-system/kube-controller-manager...\n","stream":"stderr","time":"2019-06-27T08:10:41.781607235Z"}
+{"log":"E0627 08:10:41.782081       1 leaderelection.go:324] error retrieving resource lock kube-system/kube-controller-manager: Get https://10.0.2.15:6443/api/v1/namespaces/kube-system/endpoints/kube-controller-manager?timeout=10s: dial tcp 10.0.2.15:6443: connect: connection refused\n","stream":"stderr","time":"2019-06-27T08:10:41.782247754Z"}
+{"log":"E0627 08:10:45.154776       1 leaderelection.go:324] error retrieving resource lock kube-system/kube-controller-manager: Get https://10.0.2.15:6443/api/v1/namespaces/kube-system/endpoints/kube-controller-manager?timeout=10s: dial tcp 10.0.2.15:6443: connect: connection refused\n","stream":"stderr","time":"2019-06-27T08:10:45.155058894Z"}
+{"log":"E0627 08:10:50.956827       1 leaderelection.go:324] error retrieving resource lock kube-system/kube-controller-manager: endpoints \"kube-controller-manager\" is forbidden: User \"system:kube-controller-manager\" cannot get resource \"endpoints\" in API group \"\" in the namespace \"kube-system\"\n","stream":"stderr","time":"2019-06-27T08:10:50.95699482Z"}
+{"log":"I0627 08:11:10.027494       1 leaderelection.go:245] successfully acquired lease kube-system/kube-controller-manager\n","stream":"stderr","time":"2019-06-27T08:11:10.02764043Z"}
+{"log":"I0627 08:11:10.085529       1 event.go:258] Event(v1.ObjectReference{Kind:\"Endpoints\", Namespace:\"kube-system\", Name:\"kube-controller-manager\", UID:\"76cbcfc4-459a-4bed-bd19-8f3e35cb1005\", APIVersion:\"v1\", ResourceVersion:\"212430\", FieldPath:\"\"}): type: 'Normal' reason: 'LeaderElection' master-node_4cf73365-e417-4270-8c20-db9fe5c3ff3b became leader\n","stream":"stderr","time":"2019-06-27T08:11:10.085917446Z"}
+{"log":"I0627 08:11:10.293684       1 plugins.go:103] No cloud provider specified.\n","stream":"stderr","time":"2019-06-27T08:11:10.293868957Z"}
+{"log":"I0627 08:11:10.325454       1 controller_utils.go:1029] Waiting for caches to sync for tokens controller\n","stream":"stderr","time":"2019-06-27T08:11:10.325706938Z"}
+{"log":"I0627 08:11:10.382023       1 controllermanager.go:532] Started \"deployment\"\n","stream":"stderr","time":"2019-06-27T08:11:10.382128348Z"}
+{"log":"I0627 08:11:10.382170       1 deployment_controller.go:152] Starting deployment controller\n","stream":"stderr","time":"2019-06-27T08:11:10.383451683Z"}
+{"log":"I0627 08:11:10.383486       1 controller_utils.go:1029] Waiting for caches to sync for deployment controller\n","stream":"stderr","time":"2019-06-27T08:11:10.383588593Z"}
+{"log":"I0627 08:11:10.406268       1 controllermanager.go:532] Started \"statefulset\"\n","stream":"stderr","time":"2019-06-27T08:11:10.40636259Z"}
+{"log":"I0627 08:11:10.406629       1 stateful_set.go:145] Starting stateful set controller\n","stream":"stderr","time":"2019-06-27T08:11:10.406725018Z"}
+{"log":"I0627 08:11:10.406811       1 controller_utils.go:1029] Waiting for caches to sync for stateful set controller\n","stream":"stderr","time":"2019-06-27T08:11:10.406864688Z"}
+{"log":"I0627 08:11:10.415732       1 controllermanager.go:532] Started \"cronjob\"\n","stream":"stderr","time":"2019-06-27T08:11:10.415860004Z"}
+{"log":"I0627 08:11:10.416033       1 cronjob_controller.go:96] Starting CronJob Manager\n","stream":"stderr","time":"2019-06-27T08:11:10.416144784Z"}
+{"log":"I0627 08:11:10.429399       1 controller_utils.go:1036] Caches are synced for tokens controller\n","stream":"stderr","time":"2019-06-27T08:11:10.429601267Z"}
+{"log":"I0627 08:11:10.439598       1 certificate_controller.go:113] Starting certificate controller\n","stream":"stderr","time":"2019-06-27T08:11:10.439728458Z"}
+{"log":"I0627 08:11:10.439655       1 controller_utils.go:1029] Waiting for caches to sync for certificate controller\n","stream":"stderr","time":"2019-06-27T08:11:10.439746608Z"}
+{"log":"I0627 08:11:10.439768       1 controllermanager.go:532] Started \"csrapproving\"\n","stream":"stderr","time":"2019-06-27T08:11:10.439811014Z"}
+{"log":"I0627 08:11:10.453003       1 controllermanager.go:532] Started \"csrcleaner\"\n","stream":"stderr","time":"2019-06-27T08:11:10.453158709Z"}
+{"log":"I0627 08:11:10.453265       1 cleaner.go:81] Starting CSR cleaner controller\n","stream":"stderr","time":"2019-06-27T08:11:10.453316173Z"}
+{"log":"I0627 08:11:10.470317       1 controllermanager.go:532] Started \"persistentvolume-expander\"\n","stream":"stderr","time":"2019-06-27T08:11:10.470464675Z"}
+{"log":"I0627 08:11:10.470489       1 expand_controller.go:300] Starting expand controller\n","stream":"stderr","time":"2019-06-27T08:11:10.47065209Z"}
+{"log":"I0627 08:11:10.470510       1 controller_utils.go:1029] Waiting for caches to sync for expand controller\n","stream":"stderr","time":"2019-06-27T08:11:10.470663039Z"}
+{"log":"I0627 08:11:10.479854       1 controllermanager.go:532] Started \"clusterrole-aggregation\"\n","stream":"stderr","time":"2019-06-27T08:11:10.479951161Z"}
+{"log":"I0627 08:11:10.480052       1 clusterroleaggregation_controller.go:148] Starting ClusterRoleAggregator\n","stream":"stderr","time":"2019-06-27T08:11:10.480103042Z"}
+{"log":"I0627 08:11:10.480145       1 controller_utils.go:1029] Waiting for caches to sync for ClusterRoleAggregator controller\n","stream":"stderr","time":"2019-06-27T08:11:10.480183432Z"}
+{"log":"I0627 08:11:10.701074       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for limitranges\n","stream":"stderr","time":"2019-06-27T08:11:10.701279699Z"}
+{"log":"W0627 08:11:10.701166       1 shared_informer.go:364] resyncPeriod 60229800196950 is smaller than resyncCheckPeriod 67322023627039 and the informer has already started. Changing it to 67322023627039\n","stream":"stderr","time":"2019-06-27T08:11:10.701296218Z"}
+{"log":"I0627 08:11:10.701260       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for serviceaccounts\n","stream":"stderr","time":"2019-06-27T08:11:10.701338159Z"}
+{"log":"W0627 08:11:10.701277       1 shared_informer.go:364] resyncPeriod 60217636748767 is smaller than resyncCheckPeriod 67322023627039 and the informer has already started. Changing it to 67322023627039\n","stream":"stderr","time":"2019-06-27T08:11:10.701344173Z"}
+{"log":"I0627 08:11:10.701351       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for networkpolicies.networking.k8s.io\n","stream":"stderr","time":"2019-06-27T08:11:10.701478338Z"}
+{"log":"I0627 08:11:10.701416       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for controllerrevisions.apps\n","stream":"stderr","time":"2019-06-27T08:11:10.701487645Z"}
+{"log":"I0627 08:11:10.701486       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for daemonsets.extensions\n","stream":"stderr","time":"2019-06-27T08:11:10.701597835Z"}
+{"log":"I0627 08:11:10.701717       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for daemonsets.apps\n","stream":"stderr","time":"2019-06-27T08:11:10.701947678Z"}
+{"log":"I0627 08:11:10.701749       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for cronjobs.batch\n","stream":"stderr","time":"2019-06-27T08:11:10.701957626Z"}
+{"log":"I0627 08:11:10.701772       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for poddisruptionbudgets.policy\n","stream":"stderr","time":"2019-06-27T08:11:10.701961103Z"}
+{"log":"I0627 08:11:10.701817       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for podtemplates\n","stream":"stderr","time":"2019-06-27T08:11:10.701974959Z"}
+{"log":"I0627 08:11:10.701840       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for endpoints\n","stream":"stderr","time":"2019-06-27T08:11:10.701978396Z"}
+{"log":"I0627 08:11:10.701862       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for deployments.extensions\n","stream":"stderr","time":"2019-06-27T08:11:10.701981571Z"}
+{"log":"I0627 08:11:10.701926       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for horizontalpodautoscalers.autoscaling\n","stream":"stderr","time":"2019-06-27T08:11:10.702134113Z"}
+{"log":"I0627 08:11:10.701955       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for rolebindings.rbac.authorization.k8s.io\n","stream":"stderr","time":"2019-06-27T08:11:10.702389106Z"}
+{"log":"I0627 08:11:10.701978       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for roles.rbac.authorization.k8s.io\n","stream":"stderr","time":"2019-06-27T08:11:10.702490676Z"}
+{"log":"I0627 08:11:10.701998       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for replicasets.extensions\n","stream":"stderr","time":"2019-06-27T08:11:10.702494316Z"}
+{"log":"I0627 08:11:10.702070       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for networkpolicies.extensions\n","stream":"stderr","time":"2019-06-27T08:11:10.702497488Z"}
+{"log":"I0627 08:11:10.702099       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for events.events.k8s.io\n","stream":"stderr","time":"2019-06-27T08:11:10.702500656Z"}
+{"log":"I0627 08:11:10.702131       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for statefulsets.apps\n","stream":"stderr","time":"2019-06-27T08:11:10.702506365Z"}
+{"log":"I0627 08:11:10.702199       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for ingresses.networking.k8s.io\n","stream":"stderr","time":"2019-06-27T08:11:10.702509721Z"}
+{"log":"I0627 08:11:10.702245       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for ingresses.extensions\n","stream":"stderr","time":"2019-06-27T08:11:10.702512892Z"}
+{"log":"I0627 08:11:10.702302       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for replicasets.apps\n","stream":"stderr","time":"2019-06-27T08:11:10.70251602Z"}
+{"log":"I0627 08:11:10.702332       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for jobs.batch\n","stream":"stderr","time":"2019-06-27T08:11:10.702519273Z"}
+{"log":"I0627 08:11:10.702359       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for leases.coordination.k8s.io\n","stream":"stderr","time":"2019-06-27T08:11:10.70252243Z"}
+{"log":"I0627 08:11:10.702385       1 resource_quota_monitor.go:228] QuotaMonitor created object count evaluator for deployments.apps\n","stream":"stderr","time":"2019-06-27T08:11:10.702525637Z"}
+{"log":"I0627 08:11:10.702434       1 controllermanager.go:532] Started \"resourcequota\"\n","stream":"stderr","time":"2019-06-27T08:11:10.702528746Z"}
+{"log":"I0627 08:11:10.703430       1 resource_quota_controller.go:271] Starting resource quota controller\n","stream":"stderr","time":"2019-06-27T08:11:10.70359199Z"}
+{"log":"I0627 08:11:10.704266       1 controller_utils.go:1029] Waiting for caches to sync for resource quota controller\n","stream":"stderr","time":"2019-06-27T08:11:10.704342819Z"}
+{"log":"I0627 08:11:10.704395       1 resource_quota_monitor.go:303] QuotaMonitor running\n","stream":"stderr","time":"2019-06-27T08:11:10.70444273Z"}
+{"log":"I0627 08:11:10.715540       1 controllermanager.go:532] Started \"serviceaccount\"\n","stream":"stderr","time":"2019-06-27T08:11:10.715628919Z"}
+{"log":"I0627 08:11:10.716060       1 serviceaccounts_controller.go:117] Starting service account controller\n","stream":"stderr","time":"2019-06-27T08:11:10.716148352Z"}
+{"log":"I0627 08:11:10.716206       1 controller_utils.go:1029] Waiting for caches to sync for service account controller\n","stream":"stderr","time":"2019-06-27T08:11:10.716328601Z"}
+{"log":"I0627 08:11:10.724625       1 node_lifecycle_controller.go:77] Sending events to api server\n","stream":"stderr","time":"2019-06-27T08:11:10.72471588Z"}
+{"log":"E0627 08:11:10.724787       1 core.go:160] failed to start cloud node lifecycle controller: no cloud provider provided\n","stream":"stderr","time":"2019-06-27T08:11:10.72483523Z"}
+{"log":"W0627 08:11:10.724859       1 controllermanager.go:524] Skipping \"cloud-node-lifecycle\"\n","stream":"stderr","time":"2019-06-27T08:11:10.724899734Z"}
+{"log":"W0627 08:11:10.724925       1 controllermanager.go:524] Skipping \"root-ca-cert-publisher\"\n","stream":"stderr","time":"2019-06-27T08:11:10.724964669Z"}
+{"log":"I0627 08:11:10.735200       1 controllermanager.go:532] Started \"replicationcontroller\"\n","stream":"stderr","time":"2019-06-27T08:11:10.735444563Z"}
+{"log":"I0627 08:11:10.735480       1 replica_set.go:182] Starting replicationcontroller controller\n","stream":"stderr","time":"2019-06-27T08:11:10.73661929Z"}
+{"log":"I0627 08:11:10.736661       1 controller_utils.go:1029] Waiting for caches to sync for ReplicationController controller\n","stream":"stderr","time":"2019-06-27T08:11:10.73670209Z"}
+{"log":"I0627 08:11:11.079567       1 controllermanager.go:532] Started \"horizontalpodautoscaling\"\n","stream":"stderr","time":"2019-06-27T08:11:11.079675172Z"}
+{"log":"I0627 08:11:11.079617       1 horizontal.go:156] Starting HPA controller\n","stream":"stderr","time":"2019-06-27T08:11:11.079690969Z"}
+{"log":"I0627 08:11:11.079713       1 controller_utils.go:1029] Waiting for caches to sync for HPA controller\n","stream":"stderr","time":"2019-06-27T08:11:11.079795133Z"}
+{"log":"I0627 08:11:11.232043       1 node_ipam_controller.go:94] Sending events to api server.\n","stream":"stderr","time":"2019-06-27T08:11:11.232150629Z"}
+{"log":"I0627 08:11:21.244992       1 range_allocator.go:78] Sending events to api server.\n","stream":"stderr","time":"2019-06-27T08:11:21.245129725Z"}
+{"log":"I0627 08:11:21.245327       1 range_allocator.go:99] No Service CIDR provided. Skipping filtering out service addresses.\n","stream":"stderr","time":"2019-06-27T08:11:21.245469674Z"}
+{"log":"I0627 08:11:21.245354       1 range_allocator.go:108] Node master-node has CIDR 10.244.0.0/24, occupying it in CIDR map\n","stream":"stderr","time":"2019-06-27T08:11:21.245539118Z"}
+{"log":"I0627 08:11:21.245416       1 controllermanager.go:532] Started \"nodeipam\"\n","stream":"stderr","time":"2019-06-27T08:11:21.245640841Z"}
+{"log":"I0627 08:11:21.245669       1 node_ipam_controller.go:162] Starting ipam controller\n","stream":"stderr","time":"2019-06-27T08:11:21.245741926Z"}
+{"log":"I0627 08:11:21.245697       1 controller_utils.go:1029] Waiting for caches to sync for node controller\n","stream":"stderr","time":"2019-06-27T08:11:21.245752115Z"}
+{"log":"I0627 08:11:21.255688       1 node_lifecycle_controller.go:290] Sending events to api server.\n","stream":"stderr","time":"2019-06-27T08:11:21.25588512Z"}
+{"log":"I0627 08:11:21.256102       1 node_lifecycle_controller.go:323] Controller is using taint based evictions.\n","stream":"stderr","time":"2019-06-27T08:11:21.256281806Z"}
+{"log":"I0627 08:11:21.256213       1 taint_manager.go:175] Sending events to api server.\n","stream":"stderr","time":"2019-06-27T08:11:21.256339695Z"}
+{"log":"I0627 08:11:21.256712       1 node_lifecycle_controller.go:388] Controller will reconcile labels.\n","stream":"stderr","time":"2019-06-27T08:11:21.256780412Z"}
+{"log":"I0627 08:11:21.256732       1 node_lifecycle_controller.go:401] Controller will taint node by condition.\n","stream":"stderr","time":"2019-06-27T08:11:21.256791122Z"}
+{"log":"I0627 08:11:21.256754       1 controllermanager.go:532] Started \"nodelifecycle\"\n","stream":"stderr","time":"2019-06-27T08:11:21.256910303Z"}
+{"log":"I0627 08:11:21.256949       1 node_lifecycle_controller.go:425] Starting node controller\n","stream":"stderr","time":"2019-06-27T08:11:21.257003992Z"}
+{"log":"I0627 08:11:21.256975       1 controller_utils.go:1029] Waiting for caches to sync for taint controller\n","stream":"stderr","time":"2019-06-27T08:11:21.257013506Z"}
+{"log":"I0627 08:11:21.692058       1 garbagecollector.go:128] Starting garbage collector controller\n","stream":"stderr","time":"2019-06-27T08:11:21.69220159Z"}
+{"log":"I0627 08:11:21.692130       1 controller_utils.go:1029] Waiting for caches to sync for garbage collector controller\n","stream":"stderr","time":"2019-06-27T08:11:21.69221895Z"}
+{"log":"I0627 08:11:21.692237       1 graph_builder.go:280] GraphBuilder running\n","stream":"stderr","time":"2019-06-27T08:11:21.692404836Z"}
+{"log":"I0627 08:11:21.692446       1 controllermanager.go:532] Started \"garbagecollector\"\n","stream":"stderr","time":"2019-06-27T08:11:21.692560207Z"}
+{"log":"I0627 08:11:21.706045       1 controllermanager.go:532] Started \"tokencleaner\"\n","stream":"stderr","time":"2019-06-27T08:11:21.706155359Z"}
+{"log":"I0627 08:11:21.706288       1 tokencleaner.go:116] Starting token cleaner controller\n","stream":"stderr","time":"2019-06-27T08:11:21.706367046Z"}
+{"log":"I0627 08:11:21.706346       1 controller_utils.go:1029] Waiting for caches to sync for token_cleaner controller\n","stream":"stderr","time":"2019-06-27T08:11:21.706454503Z"}
+{"log":"I0627 08:11:21.751491       1 controllermanager.go:532] Started \"persistentvolume-binder\"\n","stream":"stderr","time":"2019-06-27T08:11:21.751614176Z"}
+{"log":"I0627 08:11:21.751787       1 pv_controller_base.go:282] Starting persistent volume controller\n","stream":"stderr","time":"2019-06-27T08:11:21.751909945Z"}
+{"log":"I0627 08:11:21.751933       1 controller_utils.go:1029] Waiting for caches to sync for persistent volume controller\n","stream":"stderr","time":"2019-06-27T08:11:21.75202157Z"}
+{"log":"I0627 08:11:21.772741       1 controllermanager.go:532] Started \"attachdetach\"\n","stream":"stderr","time":"2019-06-27T08:11:21.772869877Z"}
+{"log":"I0627 08:11:21.773983       1 attach_detach_controller.go:335] Starting attach detach controller\n","stream":"stderr","time":"2019-06-27T08:11:21.774119017Z"}
+{"log":"I0627 08:11:21.774152       1 controller_utils.go:1029] Waiting for caches to sync for attach detach controller\n","stream":"stderr","time":"2019-06-27T08:11:21.774225564Z"}
+{"log":"I0627 08:11:21.782718       1 controllermanager.go:532] Started \"ttl\"\n","stream":"stderr","time":"2019-06-27T08:11:21.782880805Z"}
+{"log":"I0627 08:11:21.782968       1 ttl_controller.go:116] Starting TTL controller\n","stream":"stderr","time":"2019-06-27T08:11:21.783291771Z"}
+{"log":"I0627 08:11:21.783213       1 controller_utils.go:1029] Waiting for caches to sync for TTL controller\n","stream":"stderr","time":"2019-06-27T08:11:21.783304075Z"}
+{"log":"I0627 08:11:21.801063       1 controllermanager.go:532] Started \"disruption\"\n","stream":"stderr","time":"2019-06-27T08:11:21.801180677Z"}
+{"log":"I0627 08:11:21.801269       1 disruption.go:333] Starting disruption controller\n","stream":"stderr","time":"2019-06-27T08:11:21.802009614Z"}
+{"log":"I0627 08:11:21.802044       1 controller_utils.go:1029] Waiting for caches to sync for disruption controller\n","stream":"stderr","time":"2019-06-27T08:11:21.802147626Z"}
+{"log":"I0627 08:11:21.806689       1 controller_utils.go:1036] Caches are synced for token_cleaner controller\n","stream":"stderr","time":"2019-06-27T08:11:21.806815395Z"}
+{"log":"E0627 08:11:21.832538       1 prometheus.go:55] failed to register depth metric certificate: duplicate metrics collector registration attempted\n","stream":"stderr","time":"2019-06-27T08:11:21.83277692Z"}
+{"log":"E0627 08:11:21.832887       1 prometheus.go:68] failed to register adds metric certificate: duplicate metrics collector registration attempted\n","stream":"stderr","time":"2019-06-27T08:11:21.832968398Z"}
+{"log":"E0627 08:11:21.833068       1 prometheus.go:82] failed to register latency metric certificate: duplicate metrics collector registration attempted\n","stream":"stderr","time":"2019-06-27T08:11:21.833155805Z"}
+{"log":"E0627 08:11:21.833211       1 prometheus.go:96] failed to register workDuration metric certificate: duplicate metrics collector registration attempted\n","stream":"stderr","time":"2019-06-27T08:11:21.833272138Z"}
+{"log":"E0627 08:11:21.833383       1 prometheus.go:112] failed to register unfinished metric certificate: duplicate metrics collector registration attempted\n","stream":"stderr","time":"2019-06-27T08:11:21.833466469Z"}
+{"log":"E0627 08:11:21.833516       1 prometheus.go:126] failed to register unfinished metric certificate: duplicate metrics collector registration attempted\n","stream":"stderr","time":"2019-06-27T08:11:21.833599847Z"}
+{"log":"E0627 08:11:21.833649       1 prometheus.go:152] failed to register depth metric certificate: duplicate metrics collector registration attempted\n","stream":"stderr","time":"2019-06-27T08:11:21.833750187Z"}
+{"log":"E0627 08:11:21.833781       1 prometheus.go:164] failed to register adds metric certificate: duplicate metrics collector registration attempted\n","stream":"stderr","time":"2019-06-27T08:11:21.833868493Z"}
+{"log":"E0627 08:11:21.833925       1 prometheus.go:176] failed to register latency metric certificate: duplicate metrics collector registration attempted\n","stream":"stderr","time":"2019-06-27T08:11:21.834004542Z"}
+{"log":"E0627 08:11:21.834071       1 prometheus.go:188] failed to register work_duration metric certificate: duplicate metrics collector registration attempted\n","stream":"stderr","time":"2019-06-27T08:11:21.834150289Z"}
+{"log":"E0627 08:11:21.834204       1 prometheus.go:203] failed to register unfinished_work_seconds metric certificate: duplicate metrics collector registration attempted\n","stream":"stderr","time":"2019-06-27T08:11:21.834287164Z"}
+{"log":"E0627 08:11:21.834361       1 prometheus.go:216] failed to register longest_running_processor_microseconds metric certificate: duplicate metrics collector registration attempted\n","stream":"stderr","time":"2019-06-27T08:11:21.834451593Z"}
+{"log":"E0627 08:11:21.834504       1 prometheus.go:139] failed to register retries metric certificate: duplicate metrics collector registration attempted\n","stream":"stderr","time":"2019-06-27T08:11:21.834590173Z"}
+{"log":"E0627 08:11:21.834633       1 prometheus.go:228] failed to register retries metric certificate: duplicate metrics collector registration attempted\n","stream":"stderr","time":"2019-06-27T08:11:21.834700447Z"}
+{"log":"I0627 08:11:21.834758       1 controllermanager.go:532] Started \"csrsigning\"\n","stream":"stderr","time":"2019-06-27T08:11:21.834918825Z"}
+{"log":"I0627 08:11:21.835030       1 certificate_controller.go:113] Starting certificate controller\n","stream":"stderr","time":"2019-06-27T08:11:21.835096219Z"}
+{"log":"I0627 08:11:21.835178       1 controller_utils.go:1029] Waiting for caches to sync for certificate controller\n","stream":"stderr","time":"2019-06-27T08:11:21.835254761Z"}
+{"log":"I0627 08:11:21.854214       1 controllermanager.go:532] Started \"bootstrapsigner\"\n","stream":"stderr","time":"2019-06-27T08:11:21.854321936Z"}
+{"log":"I0627 08:11:21.854394       1 controller_utils.go:1029] Waiting for caches to sync for bootstrap_signer controller\n","stream":"stderr","time":"2019-06-27T08:11:21.854609805Z"}
+{"log":"E0627 08:11:21.864107       1 core.go:76] Failed to start service controller: WARNING: no cloud provider provided, services of type LoadBalancer will fail\n","stream":"stderr","time":"2019-06-27T08:11:21.864226391Z"}
+{"log":"W0627 08:11:21.864129       1 controllermanager.go:524] Skipping \"service\"\n","stream":"stderr","time":"2019-06-27T08:11:21.864244633Z"}
+{"log":"I0627 08:11:21.873871       1 controllermanager.go:532] Started \"pvc-protection\"\n","stream":"stderr","time":"2019-06-27T08:11:21.874019174Z"}
+{"log":"I0627 08:11:21.874213       1 pvc_protection_controller.go:100] Starting PVC protection controller\n","stream":"stderr","time":"2019-06-27T08:11:21.874294987Z"}
+{"log":"I0627 08:11:21.874342       1 controller_utils.go:1029] Waiting for caches to sync for PVC protection controller\n","stream":"stderr","time":"2019-06-27T08:11:21.874442472Z"}
+{"log":"I0627 08:11:21.897002       1 controllermanager.go:532] Started \"job\"\n","stream":"stderr","time":"2019-06-27T08:11:21.898959419Z"}
+{"log":"I0627 08:11:21.897878       1 job_controller.go:143] Starting job controller\n","stream":"stderr","time":"2019-06-27T08:11:21.898983883Z"}
+{"log":"I0627 08:11:21.897942       1 controller_utils.go:1029] Waiting for caches to sync for job controller\n","stream":"stderr","time":"2019-06-27T08:11:21.898987842Z"}
+{"log":"I0627 08:11:22.004450       1 controllermanager.go:532] Started \"replicaset\"\n","stream":"stderr","time":"2019-06-27T08:11:22.004661689Z"}
+{"log":"W0627 08:11:22.004488       1 core.go:174] configure-cloud-routes is set, but no cloud provider specified. Will not configure cloud provider routes.\n","stream":"stderr","time":"2019-06-27T08:11:22.004681337Z"}
+{"log":"W0627 08:11:22.004493       1 controllermanager.go:524] Skipping \"route\"\n","stream":"stderr","time":"2019-06-27T08:11:22.004726385Z"}
+{"log":"I0627 08:11:22.004524       1 replica_set.go:182] Starting replicaset controller\n","stream":"stderr","time":"2019-06-27T08:11:22.00473417Z"}
+{"log":"I0627 08:11:22.004542       1 controller_utils.go:1029] Waiting for caches to sync for ReplicaSet controller\n","stream":"stderr","time":"2019-06-27T08:11:22.004737615Z"}
+{"log":"I0627 08:11:22.149523       1 controllermanager.go:532] Started \"pv-protection\"\n","stream":"stderr","time":"2019-06-27T08:11:22.149695349Z"}
+{"log":"I0627 08:11:22.149581       1 pv_protection_controller.go:82] Starting PV protection controller\n","stream":"stderr","time":"2019-06-27T08:11:22.149711233Z"}
+{"log":"I0627 08:11:22.149602       1 controller_utils.go:1029] Waiting for caches to sync for PV protection controller\n","stream":"stderr","time":"2019-06-27T08:11:22.149715247Z"}
+{"log":"I0627 08:11:22.298897       1 controllermanager.go:532] Started \"podgc\"\n","stream":"stderr","time":"2019-06-27T08:11:22.299020677Z"}
+{"log":"I0627 08:11:22.299060       1 gc_controller.go:76] Starting GC controller\n","stream":"stderr","time":"2019-06-27T08:11:22.299208548Z"}
+{"log":"I0627 08:11:22.299128       1 controller_utils.go:1029] Waiting for caches to sync for GC controller\n","stream":"stderr","time":"2019-06-27T08:11:22.29921853Z"}
+{"log":"I0627 08:11:22.477924       1 controllermanager.go:532] Started \"namespace\"\n","stream":"stderr","time":"2019-06-27T08:11:22.478159088Z"}
+{"log":"I0627 08:11:22.478014       1 namespace_controller.go:186] Starting namespace controller\n","stream":"stderr","time":"2019-06-27T08:11:22.478378825Z"}
+{"log":"I0627 08:11:22.478276       1 controller_utils.go:1029] Waiting for caches to sync for namespace controller\n","stream":"stderr","time":"2019-06-27T08:11:22.478573546Z"}
+{"log":"I0627 08:11:22.600155       1 controllermanager.go:532] Started \"daemonset\"\n","stream":"stderr","time":"2019-06-27T08:11:22.600376559Z"}
+{"log":"W0627 08:11:22.600178       1 controllermanager.go:524] Skipping \"ttl-after-finished\"\n","stream":"stderr","time":"2019-06-27T08:11:22.600442712Z"}
+{"log":"I0627 08:11:22.600209       1 daemon_controller.go:267] Starting daemon sets controller\n","stream":"stderr","time":"2019-06-27T08:11:22.600447061Z"}
+{"log":"I0627 08:11:22.600225       1 controller_utils.go:1029] Waiting for caches to sync for daemon sets controller\n","stream":"stderr","time":"2019-06-27T08:11:22.600450189Z"}
+{"log":"I0627 08:11:22.748538       1 controllermanager.go:532] Started \"endpoint\"\n","stream":"stderr","time":"2019-06-27T08:11:22.748680165Z"}
+{"log":"I0627 08:11:22.748931       1 controller_utils.go:1029] Waiting for caches to sync for resource quota controller\n","stream":"stderr","time":"2019-06-27T08:11:22.749016586Z"}
+{"log":"I0627 08:11:22.749002       1 endpoints_controller.go:166] Starting endpoint controller\n","stream":"stderr","time":"2019-06-27T08:11:22.749056826Z"}
+{"log":"I0627 08:11:22.749021       1 controller_utils.go:1029] Waiting for caches to sync for endpoint controller\n","stream":"stderr","time":"2019-06-27T08:11:22.749062401Z"}
+{"log":"I0627 08:11:22.943407       1 controller_utils.go:1036] Caches are synced for certificate controller\n","stream":"stderr","time":"2019-06-27T08:11:22.94354889Z"}
+{"log":"I0627 08:11:22.943621       1 controller_utils.go:1036] Caches are synced for certificate controller\n","stream":"stderr","time":"2019-06-27T08:11:22.94371521Z"}
+{"log":"I0627 08:11:23.000467       1 controller_utils.go:1036] Caches are synced for namespace controller\n","stream":"stderr","time":"2019-06-27T08:11:23.000592961Z"}
+{"log":"I0627 08:11:23.001908       1 controller_utils.go:1036] Caches are synced for GC controller\n","stream":"stderr","time":"2019-06-27T08:11:23.002043424Z"}
+{"log":"I0627 08:11:23.037994       1 controller_utils.go:1036] Caches are synced for stateful set controller\n","stream":"stderr","time":"2019-06-27T08:11:23.038180795Z"}
+{"log":"I0627 08:11:23.038541       1 controller_utils.go:1036] Caches are synced for service account controller\n","stream":"stderr","time":"2019-06-27T08:11:23.038624084Z"}
+{"log":"W0627 08:11:23.039316       1 actual_state_of_world.go:506] Failed to update statusUpdateNeeded field in actual state of world: Failed to set statusUpdateNeeded to needed true, because nodeName=\"master-node\" does not exist\n","stream":"stderr","time":"2019-06-27T08:11:23.039609973Z"}
+{"log":"I0627 08:11:23.047082       1 controller_utils.go:1036] Caches are synced for node controller\n","stream":"stderr","time":"2019-06-27T08:11:23.047313021Z"}
+{"log":"I0627 08:11:23.047105       1 range_allocator.go:157] Starting range CIDR allocator\n","stream":"stderr","time":"2019-06-27T08:11:23.047326843Z"}
+{"log":"I0627 08:11:23.053537       1 controller_utils.go:1029] Waiting for caches to sync for cidrallocator controller\n","stream":"stderr","time":"2019-06-27T08:11:23.053682342Z"}
+{"log":"I0627 08:11:23.053902       1 controller_utils.go:1036] Caches are synced for persistent volume controller\n","stream":"stderr","time":"2019-06-27T08:11:23.054062878Z"}
+{"log":"I0627 08:11:23.058753       1 controller_utils.go:1036] Caches are synced for bootstrap_signer controller\n","stream":"stderr","time":"2019-06-27T08:11:23.05882257Z"}
+{"log":"I0627 08:11:23.064017       1 controller_utils.go:1036] Caches are synced for endpoint controller\n","stream":"stderr","time":"2019-06-27T08:11:23.064855727Z"}
+{"log":"I0627 08:11:23.064216       1 controller_utils.go:1036] Caches are synced for PV protection controller\n","stream":"stderr","time":"2019-06-27T08:11:23.064864866Z"}
+{"log":"I0627 08:11:23.072731       1 controller_utils.go:1036] Caches are synced for expand controller\n","stream":"stderr","time":"2019-06-27T08:11:23.072830106Z"}
+{"log":"I0627 08:11:23.074669       1 controller_utils.go:1036] Caches are synced for PVC protection controller\n","stream":"stderr","time":"2019-06-27T08:11:23.074742994Z"}
+{"log":"I0627 08:11:23.080532       1 controller_utils.go:1036] Caches are synced for HPA controller\n","stream":"stderr","time":"2019-06-27T08:11:23.080653871Z"}
+{"log":"I0627 08:11:23.080728       1 controller_utils.go:1036] Caches are synced for ClusterRoleAggregator controller\n","stream":"stderr","time":"2019-06-27T08:11:23.080775839Z"}
+{"log":"I0627 08:11:23.083425       1 controller_utils.go:1036] Caches are synced for TTL controller\n","stream":"stderr","time":"2019-06-27T08:11:23.083545009Z"}
+{"log":"I0627 08:11:23.098442       1 controller_utils.go:1036] Caches are synced for job controller\n","stream":"stderr","time":"2019-06-27T08:11:23.098575542Z"}
+{"log":"I0627 08:11:23.110714       1 controller_utils.go:1036] Caches are synced for ReplicaSet controller\n","stream":"stderr","time":"2019-06-27T08:11:23.110844971Z"}
+{"log":"I0627 08:11:23.137760       1 controller_utils.go:1036] Caches are synced for ReplicationController controller\n","stream":"stderr","time":"2019-06-27T08:11:23.1388878Z"}
+{"log":"I0627 08:11:23.155692       1 controller_utils.go:1036] Caches are synced for cidrallocator controller\n","stream":"stderr","time":"2019-06-27T08:11:23.156315042Z"}
+{"log":"I0627 08:11:23.184132       1 controller_utils.go:1036] Caches are synced for deployment controller\n","stream":"stderr","time":"2019-06-27T08:11:23.184289266Z"}
+{"log":"I0627 08:11:23.187213       1 controller_utils.go:1029] Waiting for caches to sync for garbage collector controller\n","stream":"stderr","time":"2019-06-27T08:11:23.187339325Z"}
+{"log":"I0627 08:11:23.204491       1 controller_utils.go:1036] Caches are synced for disruption controller\n","stream":"stderr","time":"2019-06-27T08:11:23.204625127Z"}
+{"log":"I0627 08:11:23.204751       1 disruption.go:341] Sending events to api server.\n","stream":"stderr","time":"2019-06-27T08:11:23.204856777Z"}
+{"log":"I0627 08:11:23.457575       1 controller_utils.go:1036] Caches are synced for taint controller\n","stream":"stderr","time":"2019-06-27T08:11:23.457712053Z"}
+{"log":"I0627 08:11:23.457868       1 node_lifecycle_controller.go:1159] Initializing eviction metric for zone: \n","stream":"stderr","time":"2019-06-27T08:11:23.457920091Z"}
+{"log":"W0627 08:11:23.457988       1 node_lifecycle_controller.go:833] Missing timestamp for Node master-node. Assuming now as a timestamp.\n","stream":"stderr","time":"2019-06-27T08:11:23.458031691Z"}
+{"log":"I0627 08:11:23.458083       1 node_lifecycle_controller.go:1059] Controller detected that zone  is now in state Normal.\n","stream":"stderr","time":"2019-06-27T08:11:23.45820249Z"}
+{"log":"I0627 08:11:23.458822       1 taint_manager.go:198] Starting NoExecuteTaintManager\n","stream":"stderr","time":"2019-06-27T08:11:23.458874202Z"}
+{"log":"I0627 08:11:23.459153       1 event.go:258] Event(v1.ObjectReference{Kind:\"Node\", Namespace:\"\", Name:\"master-node\", UID:\"c579d88c-2e4d-4a31-aa08-0912afb9b172\", APIVersion:\"\", ResourceVersion:\"\", FieldPath:\"\"}): type: 'Normal' reason: 'RegisteredNode' Node master-node event: Registered Node master-node in Controller\n","stream":"stderr","time":"2019-06-27T08:11:23.459211332Z"}
+{"log":"I0627 08:11:23.500491       1 controller_utils.go:1036] Caches are synced for daemon sets controller\n","stream":"stderr","time":"2019-06-27T08:11:23.500650304Z"}
+{"log":"I0627 08:11:23.505400       1 controller_utils.go:1036] Caches are synced for resource quota controller\n","stream":"stderr","time":"2019-06-27T08:11:23.505543557Z"}
+{"log":"I0627 08:11:23.549284       1 controller_utils.go:1036] Caches are synced for resource quota controller\n","stream":"stderr","time":"2019-06-27T08:11:23.549454382Z"}
+{"log":"I0627 08:11:23.574687       1 controller_utils.go:1036] Caches are synced for attach detach controller\n","stream":"stderr","time":"2019-06-27T08:11:23.574806138Z"}
+{"log":"I0627 08:11:23.588374       1 controller_utils.go:1036] Caches are synced for garbage collector controller\n","stream":"stderr","time":"2019-06-27T08:11:23.588543331Z"}
+{"log":"I0627 08:11:23.593286       1 controller_utils.go:1036] Caches are synced for garbage collector controller\n","stream":"stderr","time":"2019-06-27T08:11:23.593444793Z"}
+{"log":"I0627 08:11:23.593358       1 garbagecollector.go:137] Garbage collector: all resource monitors have synced. Proceeding to collect garbage\n","stream":"stderr","time":"2019-06-27T08:11:23.593458727Z"}
+{"log":"W0627 08:25:20.244711       1 reflector.go:302] k8s.io/client-go/informers/factory.go:133: watch of *v1beta1.Event ended with: The resourceVersion for the provided watch is too old.\n","stream":"stderr","time":"2019-06-27T08:25:20.258505421Z"}
+{"log":"W0627 08:35:08.397039       1 reflector.go:302] k8s.io/client-go/informers/factory.go:133: watch of *v1beta1.Event ended with: The resourceVersion for the provided watch is too old.\n","stream":"stderr","time":"2019-06-27T08:35:08.397198949Z"}
